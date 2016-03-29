@@ -247,6 +247,15 @@ int CTECLists<Type>::getSize()
 	return size;
 }
 
+template <class Type>
+
+void CTECLists<Type> :: swap(int indexOne, int indexTwo)
+{
+    assert(indexOne < size && indexTwo < size);
+    Type temp = getFromIndex(indexOne);
+    set(indexOne, getFromIndex(indexTwo));
+    set(indexTwo, temp);
+}
 
 
 

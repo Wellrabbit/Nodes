@@ -13,15 +13,16 @@ template <class Type>
 class ArrayNode: public Node<Type>
 {
 private:
-	ArrayNode * next;
+	ArrayNode<Type> * next;
 public:
-	ArrayNode();
+	ArrayNode<Type>();
 	ArrayNode(const Type& value);
-	ArrayNode(const Type& value, ArrayNode * next);
+	ArrayNode(const Type& value, ArrayNode<Type> * next);
 	virtual ~ArrayNode();
-	ArrayNode * getNext();
-	void setNext(ArrayNode * next);
+	ArrayNode<Type> * getNext();
+	void setNext(ArrayNode<Type> * next);
 	Type value;
+    void swap(int indexOne, int indexTwo);
 };
 
 #endif /* NODEMODEL_ARRAYNODE_H_ */

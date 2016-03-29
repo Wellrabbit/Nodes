@@ -281,6 +281,7 @@
 				F1AB17B11C9C7852006657AB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

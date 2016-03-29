@@ -33,6 +33,8 @@ public:
 	Type getFromIndex(int index);
 	Type set(int index, const Type& Value);
 	int getSize();
+    void swap(int indexOne, int indexTwo);
+    void selectionSort;
 
 
 };

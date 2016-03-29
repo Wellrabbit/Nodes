@@ -91,12 +91,13 @@ Type CTECArray<Type>::get(int position)
 		{
 			if(spot != position)
 			{
-				current = current->getNext();
+				return current = current->getNext();
 			}
 			else
 			{
 				return current->getValue();
 			}
 		}
+    
 
 }
