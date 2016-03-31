@@ -34,7 +34,7 @@ public:
 	Type set(int index, const Type& Value);
 	int getSize();
     void swap(int indexOne, int indexTwo);
-    void selectionSort;
+ //   void selectionSort;
 
 
 };
