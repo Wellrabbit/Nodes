@@ -31,8 +31,8 @@
 
 /* Begin PBXFileReference section */
 		F1AB17A81C9C7852006657AB /* Nodes */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Nodes; sourceTree = BUILT_PRODUCTS_DIR; };
-		F1AB17B31C9C78A1006657AB /* CTECArray.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CTECArray.cpp; sourceTree = "<group>"; };
-		F1AB17B41C9C78A1006657AB /* CTECArray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTECArray.h; sourceTree = "<group>"; };
+		F1AB17B31C9C78A1006657AB /* CTECArray.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = CTECArray.cpp; path = ../NodeController/CTECArray.cpp; sourceTree = "<group>"; };
+		F1AB17B41C9C78A1006657AB /* CTECArray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CTECArray.h; path = ../NodeController/CTECArray.h; sourceTree = "<group>"; };
 		F1AB17B51C9C78A1006657AB /* NodeController.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = NodeController.cpp; sourceTree = "<group>"; };
 		F1AB17B61C9C78A1006657AB /* NodeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NodeController.h; sourceTree = "<group>"; };
 		F1AB17B71C9C78A1006657AB /* Runner.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Runner.cpp; sourceTree = "<group>"; };
@@ -79,8 +79,6 @@
 		F1AB17B21C9C78A1006657AB /* NodeController */ = {
 			isa = PBXGroup;
 			children = (
-				F1AB17B31C9C78A1006657AB /* CTECArray.cpp */,
-				F1AB17B41C9C78A1006657AB /* CTECArray.h */,
 				F1AB17B51C9C78A1006657AB /* NodeController.cpp */,
 				F1AB17B61C9C78A1006657AB /* NodeController.h */,
 				F1AB17B71C9C78A1006657AB /* Runner.cpp */,
@@ -91,16 +89,18 @@
 		F1AB17B81C9C78A1006657AB /* NodeModel */ = {
 			isa = PBXGroup;
 			children = (
-				F1AB17B91C9C78A1006657AB /* ArrayNode.cpp */,
-				F1AB17BA1C9C78A1006657AB /* ArrayNode.h */,
-				F1AB17BB1C9C78A1006657AB /* CTECLists.cpp */,
-				F1AB17BC1C9C78A1006657AB /* CTECLists.h */,
-				F1AB17BD1C9C78A1006657AB /* Node.cpp */,
 				F1AB17BE1C9C78A1006657AB /* Node.h */,
-				F1AB17BF1C9C78A1006657AB /* Timer.cpp */,
-				F1AB17C01C9C78A1006657AB /* Timer.h */,
-				F1FD4CD61CBC1D2D00D97C15 /* TreeNode.cpp */,
+				F1AB17BD1C9C78A1006657AB /* Node.cpp */,
+				F1AB17BA1C9C78A1006657AB /* ArrayNode.h */,
+				F1AB17B91C9C78A1006657AB /* ArrayNode.cpp */,
 				F1FD4CD71CBC1D2D00D97C15 /* TreeNode.h */,
+				F1FD4CD61CBC1D2D00D97C15 /* TreeNode.cpp */,
+				F1AB17B41C9C78A1006657AB /* CTECArray.h */,
+				F1AB17B31C9C78A1006657AB /* CTECArray.cpp */,
+				F1AB17BC1C9C78A1006657AB /* CTECLists.h */,
+				F1AB17BB1C9C78A1006657AB /* CTECLists.cpp */,
+				F1AB17C01C9C78A1006657AB /* Timer.h */,
+				F1AB17BF1C9C78A1006657AB /* Timer.cpp */,
 			);
 			path = NodeModel;
 			sourceTree = "<group>";
