@@ -35,11 +35,17 @@ private:
     void doMergesort();
     void mergesort(int data[], int size);
     void merge(int data[], int sizeOne, int sizeTwo);
+    
+    void swap(int first, int second);
+    void quicksort(int first, int last);
+    int partition(int first, int last);
+    void doQuick();
 public:
 	NodeController();
 	virtual ~NodeController();
 	void start();
 	void testLists();
+    
 };
 
 #endif /* NODECONTROLLER_NODECONTROLLER_H_ */

@@ -85,7 +85,7 @@ void CTECArray<Type>::set(int position, const Type& value)
 template<class Type>
 Type CTECArray<Type>::get(int position)
 {
-	assert(position < size && position > -1);
+	assert(position < size && position >= 0);
 		ArrayNode<Type> * current = head;
 		for(int spot = 0; spot <= position; spot++)
 		{

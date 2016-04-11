@@ -108,9 +108,100 @@ void NodeController::mergesort(int data[], int size)
         mergesort(data, sizeOne);
         mergesort((data+sizeOne), sizeTwo);
         
-        mergesort(data, sizeOne, sizeTwo);
+        merge(data, sizeOne, sizeTwo);
     }
 }
+    void NodeController::merge(int data[], int sizeOne, int sizeTwo)
+    {
+        int * temp;
+        int copied = 0;
+        int copied1 = 0;
+        int copied2 = 0;
+        int index;
+        
+        temp = new int[sizeOne + sizeTwo];
+        
+        while ((copied1 < sizeOne) && (copied2 <sizeTwo))
+        {
+            if(data[copied1] < (data + sizeOne)[copied2])
+            {
+                temp[copied++] = data[copied1++];
+            }
+            else
+            {
+                temp[copied++] = (data + sizeOne)[copied2++];
+            }
+        }
+        while(copied < sizeOne)
+        {
+            temp[copied++] = data[copied1++];
+        }
+        while(copied2 < sizeTwo)
+        {
+            temp[copied++] = (data + sizeOne)[copied2++];
+        }
+        for(index = 0; index <sizeOne + sizeTwo; index++)
+        {
+            data[index] = temp[index];
+        }
+        delete []temp;
+    }
+
+void NodeController::quicksort(int first, int last)
+{
+    int pivotIndex;
+    if(first < last)
+    {
+        pivotIndex = partition(first, last);
+        quicksort(first, pivotIndex-1);
+        quicksort(pivotIndex+1, last);
+    }
+    
+}
+int NodeController::partition(int first, int last)
+{
+    int pivot;
+    int index, smallIndex;
+    swap(first, (first + last)/2);
+    
+    pivot = mergeData[first];
+    smallIndex = first;
+    
+    for(index = first + 1; index <= last; index++)
+    {
+        if(mergeData[index] < pivot)
+        {
+            smallIndex++;
+            swap(smallIndex , index);
+            
+        }
+    }
+    swap(first, smallIndex);
+    return smallIndex;
+}
+void NodeController::swap(int first, int last)
+{
+    int temp = mergeData[first];
+    mergeData[first] = mergeData[last];
+    mergeData[last] = temp;
+}
+
+//void NodeController::doQuick()
+//{
+  //  mergeData = new int[1000000000];
+  //  for(int spot = 0; spot < 1000000000; spot++)
+ //   {
+ //       int myRandom = rand() %500;
+  //      mergeData[spot] = myRandom;
+ //   }
+ //   Timer mergeTimer;
+ //   mergeTimer.startTimer();
+ //   quicksort(0, 1000000000-1);
+  //  mergeTimer.stopTimer();
+ //   mergeTimer.displayTimerInfo();
+    
+  //  delete [] mergeData;
+//}
 //void NodeController::sortData()
 //{
 
