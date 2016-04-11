@@ -16,7 +16,7 @@ class TreeNode : public Node<Type>
 private:
     TreeNode<Type> * leftChild;
     TreeNode<Type> * rightChild;
-    TreeNode<Type> * parent
+    TreeNode<Type> * parent;
     
 public:
     TreeNode();
