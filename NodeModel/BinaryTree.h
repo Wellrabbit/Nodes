@@ -18,13 +18,13 @@ private:
     TreeNode<Type> * root;
     int height;
     bool balanced;
-    bool contains(Type value, BinaryTree<Type> * currentTree)
+    bool contains(Type value, BinaryTree<Type> * currentTree);
 public:
     BinaryTree();
     ~BinaryTree();
-    bool insert( const Type& value)
-    Type remove(const Type& value)
-    bool contains (type value)
+    bool insert( const Type& value);
+    Type remove(const Type& value);
+    bool contains (Type value);
     int getSize();
     int getHieght();
     bool isBalanced();
