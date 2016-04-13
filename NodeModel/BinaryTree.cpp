@@ -8,6 +8,38 @@
 #include <iostream>
 using namespace std;
 #include "BinaryTree.h"
+
+template <class Type>
+BinaryTree<Type> :: BinaryTree()
+{
+    this-> root= nullptr;
+    this->size=0;
+    this->height=0;
+    this->balanced=true;
+}
+template <class Type>
+int BinaryTree<Type> :: getSize()
+{
+    size=0;
+    calculateSize(root);
+    return size;
+}
+template <class Type>
+void BinaryTree<Type> :: calculateSize(TreeNode<Type> * currentNode)
+{
+    if(currentNode != nullptr)
+    {
+        calculatedSize(currentNode->getLeftChild());
+        calculatedSize(currentNode->getRightChild());
+        size++;
+    }
+}
+template <class Type>
+TreeNode<Type> * BinaryTree<Type> :: getRoot()
+{
+    return root;
+}
+
 template <class Type>
 void BinaryTree<Type> :: preorderTraversal(TreeNode<Type> * currentNode)
 {
@@ -67,3 +99,33 @@ bool BinaryTree<Type> :: contains(Type value)
     
     return isInTree;
 }
+
+template <class Type>
+bool BinaryTree<Type> :: contains(Type value, BinaryTree<Type> * currentTree)
+{
+    bool isInTree = false;
+    
+    if(currentTree != nullptr)
+    {
+        if(currentTree->getRoot()->getValue() == value)
+        {
+            isInTree = true;
+        }
+        else
+        {
+            if(value > root->getValue())
+            {
+                isInTree = contains(value, root->getLeftChild());
+            }
+            else
+            {
+                isInTree = contains(value, root->getRightChild());
+            }
+
+        }
+            
+    }
+    
+    return isInTree;
+}
+

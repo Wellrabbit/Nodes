@@ -18,20 +18,21 @@ private:
     TreeNode<Type> * root;
     int height;
     bool balanced;
-    bool contains(Type value, BinaryTree<Type> * currentTree);
+    void calculateSize(TreeNode<Type> * currentNode);
+    bool contains(Type value, BinaryTree<Type> * currentTree); // Done
 public:
     BinaryTree();
     ~BinaryTree();
     bool insert( const Type& value);
     Type remove(const Type& value);
-    bool contains (Type value);
+    bool contains (Type value); //Done
     int getSize();
     int getHieght();
     bool isBalanced();
     TreeNode<Type> * getRoot();
-    void preorderTraversal(TreeNode<Type> * currentNode);
-    void inorderTraversal(TreeNode<Type> * currentNode);
-    void postorderTraversal(TreeNode<Type> * currentNode);
+    void preorderTraversal(TreeNode<Type> * currentNode); //Done
+    void inorderTraversal(TreeNode<Type> * currentNode); //Done
+    void postorderTraversal(TreeNode<Type> * currentNode); //Done
 };
 
 
