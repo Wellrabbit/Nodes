@@ -29,6 +29,9 @@ public:
     int getHieght();
     bool isBalanced();
     TreeNode<Type> * getRoot();
+    void preorderTraversal(TreeNode<Type> * currentNode);
+    void inorderTraversal(TreeNode<Type> * currentNode);
+    void postorderTraversal(TreeNode<Type> * currentNode);
 };
 
 
