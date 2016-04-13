@@ -24,9 +24,9 @@ void BinaryTree<Type> :: inorderTraversal(TreeNode<Type> * currentNode)
     if(currentNode != nullptr)
     {
         
-        preorderTraversal(currentNode->getLetChild());
+        inorderTraversal(currentNode->getLetChild());
         cout << currentNode->getValue() << " " ;
-        preorderTraversal(currentNode->getRightChild());
+        inorderTraversal(currentNode->getRightChild());
     }
 }
 template <class Type>
@@ -35,8 +35,35 @@ void BinaryTree<Type> :: postorderTraversal(TreeNode<Type> * currentNode)
     if(currentNode != nullptr)
     {
         
-        preorderTraversal(currentNode->getLetChild());
-        preorderTraversal(currentNode->getRightChild());
+        postorderTraversal(currentNode->getLetChild());
+        postorderTraversal(currentNode->getRightChild());
         cout << currentNode->getValue() << " " ;
     }
+}
+
+template <class Type>
+bool BinaryTree<Type> :: contains(Type value)
+{
+    bool isInTree = false;
+
+    if(root != nullptr)
+    {
+        if(root->getValue() == value)
+        {
+            isInTree = true;
+        }
+        else
+        {
+            if(value > root->getValue())
+            {
+                isInTree = contains(value, root->getLeftChild());
+            }
+            else
+            {
+                isInTree = contains(value, root->getRightChild());
+            }
+        }
+    }
+    
+    return isInTree;
 }
