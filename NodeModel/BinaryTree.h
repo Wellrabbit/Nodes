@@ -20,6 +20,8 @@ private:
     bool balanced;
     void calculateSize(TreeNode<Type> * currentNode);
     bool contains(Type value, BinaryTree<Type> * currentTree); // Done
+    TreeNode<Type> * getRightMostChild(BinaryTree<Type> leftSubTree);
+    TreeNode<Type> * getLeftMostChild(BinaryTree<Type> rightSubTree);
 public:
     BinaryTree();
     ~BinaryTree();
