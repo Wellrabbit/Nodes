@@ -14,6 +14,9 @@
 		F1AB17C51C9C78A1006657AB /* CTECLists.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F1AB17BB1C9C78A1006657AB /* CTECLists.cpp */; };
 		F1AB17C61C9C78A1006657AB /* Node.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F1AB17BD1C9C78A1006657AB /* Node.cpp */; };
 		F1AB17C71C9C78A1006657AB /* Timer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F1AB17BF1C9C78A1006657AB /* Timer.cpp */; };
+		F1B1EFA91CCE92680062651D /* Graph.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F1B1EFA71CCE92680062651D /* Graph.cpp */; };
+		F1C3CB781CE1041400C4A91A /* HashTable.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F1C3CB761CE1041400C4A91A /* HashTable.cpp */; };
+		F1C3CB7B1CE106B900C4A91A /* HashNode.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F1C3CB791CE106B900C4A91A /* HashNode.cpp */; };
 		F1FD4CD81CBC1D2D00D97C15 /* TreeNode.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F1FD4CD61CBC1D2D00D97C15 /* TreeNode.cpp */; };
 		F1FD4CDB1CBC2D5400D97C15 /* BinaryTree.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F1FD4CD91CBC2D5400D97C15 /* BinaryTree.cpp */; };
 /* End PBXBuildFile section */
@@ -45,6 +48,12 @@
 		F1AB17BE1C9C78A1006657AB /* Node.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Node.h; sourceTree = "<group>"; };
 		F1AB17BF1C9C78A1006657AB /* Timer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Timer.cpp; sourceTree = "<group>"; };
 		F1AB17C01C9C78A1006657AB /* Timer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Timer.h; sourceTree = "<group>"; };
+		F1B1EFA71CCE92680062651D /* Graph.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Graph.cpp; sourceTree = "<group>"; };
+		F1B1EFA81CCE92680062651D /* Graph.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Graph.hpp; sourceTree = "<group>"; };
+		F1C3CB761CE1041400C4A91A /* HashTable.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = HashTable.cpp; sourceTree = "<group>"; };
+		F1C3CB771CE1041400C4A91A /* HashTable.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = HashTable.hpp; sourceTree = "<group>"; };
+		F1C3CB791CE106B900C4A91A /* HashNode.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = HashNode.cpp; sourceTree = "<group>"; };
+		F1C3CB7A1CE106B900C4A91A /* HashNode.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = HashNode.hpp; sourceTree = "<group>"; };
 		F1FD4CD61CBC1D2D00D97C15 /* TreeNode.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TreeNode.cpp; sourceTree = "<group>"; };
 		F1FD4CD71CBC1D2D00D97C15 /* TreeNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TreeNode.h; sourceTree = "<group>"; };
 		F1FD4CD91CBC2D5400D97C15 /* BinaryTree.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = BinaryTree.cpp; sourceTree = "<group>"; };
@@ -106,6 +115,12 @@
 				F1FD4CD91CBC2D5400D97C15 /* BinaryTree.cpp */,
 				F1AB17C01C9C78A1006657AB /* Timer.h */,
 				F1AB17BF1C9C78A1006657AB /* Timer.cpp */,
+				F1B1EFA81CCE92680062651D /* Graph.hpp */,
+				F1B1EFA71CCE92680062651D /* Graph.cpp */,
+				F1C3CB761CE1041400C4A91A /* HashTable.cpp */,
+				F1C3CB771CE1041400C4A91A /* HashTable.hpp */,
+				F1C3CB791CE106B900C4A91A /* HashNode.cpp */,
+				F1C3CB7A1CE106B900C4A91A /* HashNode.hpp */,
 			);
 			path = NodeModel;
 			sourceTree = "<group>";
@@ -170,11 +185,14 @@
 				F1AB17C61C9C78A1006657AB /* Node.cpp in Sources */,
 				F1AB17C31C9C78A1006657AB /* Runner.cpp in Sources */,
 				F1FD4CD81CBC1D2D00D97C15 /* TreeNode.cpp in Sources */,
+				F1B1EFA91CCE92680062651D /* Graph.cpp in Sources */,
 				F1AB17C71C9C78A1006657AB /* Timer.cpp in Sources */,
 				F1FD4CDB1CBC2D5400D97C15 /* BinaryTree.cpp in Sources */,
 				F1AB17C41C9C78A1006657AB /* ArrayNode.cpp in Sources */,
 				F1AB17C11C9C78A1006657AB /* CTECArray.cpp in Sources */,
+				F1C3CB781CE1041400C4A91A /* HashTable.cpp in Sources */,
 				F1AB17C51C9C78A1006657AB /* CTECLists.cpp in Sources */,
+				F1C3CB7B1CE106B900C4A91A /* HashNode.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

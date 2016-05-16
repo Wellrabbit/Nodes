@@ -19,14 +19,16 @@ private:
     int height;
     bool balanced;
     void calculateSize(TreeNode<Type> * currentNode);
-    bool contains(Type value, BinaryTree<Type> * currentTree); // Done
-    TreeNode<Type> * getRightMostChild(BinaryTree<Type> leftSubTree);
-    TreeNode<Type> * getLeftMostChild(BinaryTree<Type> rightSubTree);
+    bool contains(Type value, TreeNode<Type> * currentTree); // Done
+    TreeNode<Type> * getRightMostChild(TreeNode<Type> * leftSubTree);
+    TreeNode<Type> * getLeftMostChild(TreeNode<Type> * rightSubTree);
 public:
     BinaryTree();
     ~BinaryTree();
     bool insert( const Type& value);
-    Type remove(const Type& value);
+    void remove(const Type& value);
+    void remove(TreeNode<Type> * nodeToBeRemoved);
+  
     bool contains (Type value); //Done
     int getSize();
     int getHieght();
