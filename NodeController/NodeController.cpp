@@ -186,23 +186,56 @@ void NodeController::swap(int first, int last)
     mergeData[last] = temp;
 }
 
-//void NodeController::doQuick()
-//{
-  //  mergeData = new int[1000000000];
-  //  for(int spot = 0; spot < 1000000000; spot++)
- //   {
- //       int myRandom = rand() %500;
-  //      mergeData[spot] = myRandom;
- //   }
- //   Timer mergeTimer;
- //   mergeTimer.startTimer();
- //   quicksort(0, 1000000000-1);
-  //  mergeTimer.stopTimer();
- //   mergeTimer.displayTimerInfo();
+void NodeController::tryGraph()
+{
+    CTECGraph<int> testGraph;
+    testGraph.addVertex(4);
+    testGraph.addVertex(13);
+    testGraph.addVertex(2);
+    testGraph.addVertex(5);
+    testGraph.addVertex(8);
+    testGraph.addVertex(21);
+    testGraph.addVertex(43);
+    testGraph.addVertex(1);
+    testGraph.addVertex(99);
+    testGraph.addVertex(10);
+    //edges
+    testGraph.addEdge(0,1);
+    testGraph.addEdge(1,2);
+    testGraph.addEdge(2,3);
+    testGraph.addEdge(3,4);
+    testGraph.addEdge(4,5);
+    testGraph.addEdge(5,6);
+    testGraph.addEdge(6,7);
+    testGraph.addEdge(7,8);
+    testGraph.addEdge(8,9);
     
-  //  delete [] mergeData;
-//}
-//void NodeController::sortData()
-//{
+    
+    testGraph.breadthFirstTraversal(testGraph,0);
+    
+}
 
-//}
+void NodeController::tryHashTable()
+{
+    CTECHashTable<int> tempTable;
+    HashNode<int> tempArray[10];
+    for(int spot = 0; spot < 10; spot++)
+    {
+        int randomValue = rand();
+        int randomKey = rand();
+        HashNode<int> * temp = new HashNode<int>(randomKey, randomValue);
+        tempTable.add(*temp);
+        tempArray[spot] = *temp;
+    }
+    bool test = tempTable.contains(tempArray[0]);
+    string result;
+    if(test)
+    {
+        result = "yup";
+    }
+    else
+    {
+        result = "nope";
+    }
+    
+}

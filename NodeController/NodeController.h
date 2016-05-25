@@ -18,6 +18,9 @@
 #include "CTECArray.cpp"
 #include "../NodeModel/CTECLists.h"
 #include "../NodeModel/CTECLists.cpp"
+#include "../NodeModel/CTECGraph.cpp"
+#include "../NodeModel/BinaryTree.cpp"
+#include "../NodeModel/CTECHashTable.cpp"
 using namespace std;
 
 class NodeController {
@@ -29,6 +32,7 @@ private:
 	CTECArray<int> * notHipsterEnough;
 	Timer arrayTimer;
 	CTECLists<int> * numbers;
+    
   //  void sortData;
     
     int * mergeData;
@@ -40,6 +44,10 @@ private:
     void quicksort(int first, int last);
     int partition(int first, int last);
     void doQuick();
+    
+    void tryGraph();
+    void tryTrees();
+    void tryHashTable();
 public:
 	NodeController();
 	virtual ~NodeController();
