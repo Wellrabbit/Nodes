@@ -11,4 +11,21 @@
 
 #include <stdio.h>
 
+#include <iostream>
+
+template<class Type>
+class HashNode
+{
+private:
+    int key;
+    Type value;
+    
+public:
+    HashNode();
+    HashNode(int key, const Type& value);
+    int getKey();
+    Type getValue();
+    
+    
+};
 #endif /* HashNode_hpp */
